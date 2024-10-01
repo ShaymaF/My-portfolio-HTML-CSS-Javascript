@@ -1,0 +1,684 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 60px; /* Adjust this value to match the height of the navbar */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjust the padding for smaller screens if needed */
+    }
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+p, ul {
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Header Section */
+header {
+    padding: 60px 0 0;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.profile-picture-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .profile-picture-container {
+        width: 50%;
+        margin-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+.profile-picture {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-info h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .profile-info h1 {
+        font-size: 3.5em;
+    }
+}
+
+#job-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.8em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+}
+
+/* CV Download Buttons */
+#cv-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#cv-buttons button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#cv-buttons button:hover {
+    background-color: #e67e22;
+}
+
+@media (min-width: 768px) {
+    #cv-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Section Styles */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 50px;
+        margin: auto;
+        max-width: 1200px;
+    }
+
+    #projects, #skills, #education, #experience, #contact {
+        margin-top: 120px;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+h2:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #2c3e50;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+/* Skills Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.skill-card {
+    background-color: #f7f9fb;
+    padding: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .skill-card h3 {
+        font-size: 1.5em;
+    }
+}
+
+.skill-card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skill-card ul li {
+    color: #6d7784;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* Projects Section */
+#projects {
+    margin-bottom: 40px;
+    background-color: #f7f9fb;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-gallery .image-item {
+    position: relative;
+}
+
+.grid-gallery .image-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #f7f9fb;
+}
+
+.grid-gallery .image-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Education Section */
+#education {
+    background-color: #f7f9fb;
+    padding: 40px;
+    text-align: center;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.education-card {
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: white;
+    padding: 40px;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+.contact-info__footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
+.contact-info__footer {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #ff9800;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    /* color: #3498db; */
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+    color: #2c3e50;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+/* Navbar Container */
+nav{
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: #2c3e50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Navbar Logo */
+.navbar-logo a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar-logo{
+    margin-right: 40px;
+
+}
+
+/* Navbar Toggle (Hamburger Icon) */
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    color: white;
+    font-size: 1.8em;
+    transform: translateY(-50%);
+
+}
+
+/* Mobile Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ff9800;
+}
+
+/* Language Switch for Desktop */
+.language-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switch button {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switch button.active-lang {
+    background-color: #e67e22; /* Default color for active button (ENG) */
+}
+
+.language-switch button:hover {
+    background-color: #ff9800; /* Hover color for both buttons */
+}
+
+.language-switch button:not(.active-lang) {
+    background-color: #34495e; /* Default background color for inactive button */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-menu {
+        display: none; /* Hide the menu initially */
+        position: absolute;
+        top: 60px;
+        /* left: 0; */
+        width: 100%;
+        background-color: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show the menu when active */
+        opacity: 1;
+        transform: translateY(0); /* Slide down */
+    }
+
+    .nav-menu li {
+        margin-bottom: 20px; /* Spacing between items */
+        text-align: center; /* Center-align the text */
+    }
+
+    .navbar-toggle {
+        display: contents;
+
+    }
+}
+/* Styling for profile section */
+.profile-description {
+    background-color: #f7f9fb;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
+    font-size: 1.1em;
+  }
+  
+  .profile-description h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-top: 20px;
+  }
+  
+  .strengths-list {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .strengths-list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    
+  }
+  
+  .strengths-list li strong {
+    color: #ff9800;
+    font-weight: 600;
+  }
+  /* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in animation for sections */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Slide animations for profile info */
+.profile-info {
+    animation: slideInLeft 1.2s ease-in-out;
+}
+
+.profile-picture-container {
+    animation: slideInRight 1.2s ease-in-out;
+}
+
+/* Adding hover transitions for skill cards */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+#skills {
+    animation-delay: 0.3s;
+}
+
+#projects {
+    animation-delay: 0.6s;
+}
+
+#experience {
+    animation-delay: 0.9s;
+}
+
+#education {
+    animation-delay: 1.2s;
+}
+
+#contact {
+    animation-delay: 1.5s;
+}
+/* Buttons hover animations */
+#cv-buttons button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#cv-buttons a{
+    color: white;
+    border: none;
+
+
+}
+#cv-buttons button:hover {
+    background-color: #e67e22;
+    transform: translateY(-5px);
+}
+
+/* Social media hover animations */
+.social-links a {
+    color: #fff;
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+i.fab.fa-linkedin, i.fab.fa-github {
+    color: #2c3e50;
+}

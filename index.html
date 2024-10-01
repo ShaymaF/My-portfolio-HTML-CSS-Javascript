@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chaima Fradi - Full Stack Web Developer Portfolio">
+    <title>Chaima Fradi - Full Stack Web Developer</title>
+
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Include Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Google Analytics (Temporary Fake ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with real tracking ID later
+    </script>
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <nav id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i> <!-- Mobile Menu Icon -->
+            </div>
+            <div class="navbar-logo">
+                <!-- Language Switch with ENG active by default -->
+                <div class="language-switch">
+                    <button id="switchToEng" class="active-lang">ENG</button>
+                    <button id="switchToFr">FR</button>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" data-aos="fade-up">
+        <div class="profile-container">
+            <!-- Right Div for Name and Information -->
+            <div class="profile-info" data-aos="fade-right">
+                <h1 id="name">Chaima Fradi</h1>
+                <p id="job-title">Senior Full Stack Engineer</p>
+                <p class="contact-info">
+                    <a href="mailto:shaima.frady@gmail.com"><i class="fas fa-envelope" style="color: #ff9800;"></i> shaima.frady@gmail.com</a>
+                   </br>
+                    <i class="fas fa-phone" style="color: #ff9800;"></i> +216 5488 1192
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/chaima-fradi-18b984101" target="_blank">
+                        <i class="fab fa-linkedin"></i> 
+                    </a>
+                    <a href="https://github.com/ShaymaF" target="_blank">
+                        <i class="fab fa-github"></i> 
+                    </a>
+                </div>
+                <!-- CV Download Buttons -->
+                <div id="cv-buttons">
+                    <button><a  id="downloadCvEng" target="_blank" ><i class="fas fa-download" style="color: white;"></i> Download CV (ENG)</a></button>
+                    <button><a  id="downloadCvFr" target="_blank"><i class="fas fa-download" style="color: white;"></i> Télécharger CV (FR)</a></button>
+                </div>
+            </div>
+            <!-- Left Div for Picture -->
+            <div class="profile-picture-container" data-aos="fade-left">
+                <img src="logo.png" alt="Chaima Fradi - Profile Picture" class="profile-picture" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profile" data-aos="fade-up">
+        <h2>Profile</h2>
+        <p id="profileText"></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+        <h2 id="skills-title">Core Technical Expertise</h2>
+        <div id="skills-grid" class="skills-container">
+            <!-- Skills cards will be dynamically populated here by JS -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+        <h2 id="projects-title">Key Projects</h2>
+        <div id="projects-list"></div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" data-aos="fade-up">
+        <h2 id="experience-title">Professional Experience</h2>
+        <div id="experience-list"></div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" data-aos="fade-up">
+        <h2 id="education-title">Education</h2>
+        <div id="education-container"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <h2 id="contact-title">Contact Me</h2>
+        <div class="contact-info__footer" style="text-align: center;">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:shaima.frady@gmail.com">shaima.frady@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt"></i> Phone: +216 5488 1192</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps?q=Kalâa+Kébira,+Sousse,+Tunisia" target="_blank">Kalâa Kébira, Sousse, Tunisia</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/chaima-fradi-18b984101" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ShaymaF" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="languages-title">Languages: English, French, Arabic</p>
+        <p id="passions-title">Passions: Painting, Cooking, Travel, Cinema</p>
+    </footer>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Include Magnific Popup JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Initialize AOS for Animations -->
+   <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000, // Animation duration in milliseconds
+                once: true, // Animation happens only once
+            });
+        });
+    </script> -->
+
+    <!-- Custom Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
