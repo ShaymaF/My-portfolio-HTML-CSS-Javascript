@@ -108,7 +108,8 @@ header {
 
 .profile-picture {
     width: auto;
-    height: auto;
+    height: 40px;
+    margin: auto;
     max-width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -452,6 +453,7 @@ nav{
 
 .nav-menu li {
     margin: 0 15px;
+    margin-block: auto;
 }
 
 .nav-menu li a {
